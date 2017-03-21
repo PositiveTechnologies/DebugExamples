@@ -23,7 +23,7 @@ Press Ctrl+C for exit.{0}";
 		static void Main(string[] args)
 		{
 			Console.WriteLine(Info, Environment.NewLine);
-			Console.WriteLine($"ProcessId = {Process.GetCurrentProcess().Id}");
+			Console.WriteLine($"ProcessId = {Process.GetCurrentProcess().Id}, {ProcessorArchticture()}");
 
 			int exampleNumber = GetExampleNumber();
 			Console.WriteLine($"{ExampleNames[exampleNumber - 1]} has been chosen.");
@@ -65,6 +65,11 @@ Press Ctrl+C for exit.{0}";
 				if (input.ToLowerInvariant() == "q")
 					Environment.Exit(0);
 			}
+		}
+
+		private static string ProcessorArchticture()
+		{
+			return IntPtr.Size == 8 ? "x64" : "x86";
 		}
 	}
 }

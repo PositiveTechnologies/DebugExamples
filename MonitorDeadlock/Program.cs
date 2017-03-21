@@ -16,7 +16,7 @@ namespace MonitorDeadlock
 		{
 			Console.WriteLine("Simple deadlock example on lock construction.");
 			Console.WriteLine("Press Ctrl+C for exit.\n");
-			Console.WriteLine($"ProcessId = {Process.GetCurrentProcess().Id}");
+			Console.WriteLine($"ProcessId = {Process.GetCurrentProcess().Id}, {ProcessorArchticture()}");
 
 			var t1 = Task.Factory.StartNew(Thread1, TaskCreationOptions.LongRunning);
 			var t2 = Task.Factory.StartNew(Thread2, TaskCreationOptions.LongRunning);
@@ -46,6 +46,11 @@ namespace MonitorDeadlock
 				{
 				}
 			}
+		}
+
+		private static string ProcessorArchticture()
+		{
+			return IntPtr.Size == 8 ? "x64" : "x86";
 		}
 	}
 }
