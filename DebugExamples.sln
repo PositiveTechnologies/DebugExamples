@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitorDeadlock", "MonitorDeadlock\MonitorDeadlock.csproj", "{FEFB63F6-EB6E-4ABB-B1B9-0EEC16981F26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RwlDeadlock", "RwlDeadlock\RwlDeadlock.csproj", "{8789BA1E-EF7A-4300-8E76-83A20500CC19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEFB63F6-EB6E-4ABB-B1B9-0EEC16981F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEFB63F6-EB6E-4ABB-B1B9-0EEC16981F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEFB63F6-EB6E-4ABB-B1B9-0EEC16981F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEFB63F6-EB6E-4ABB-B1B9-0EEC16981F26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8789BA1E-EF7A-4300-8E76-83A20500CC19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8789BA1E-EF7A-4300-8E76-83A20500CC19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8789BA1E-EF7A-4300-8E76-83A20500CC19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8789BA1E-EF7A-4300-8E76-83A20500CC19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
