@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RwlDeadlock", "RwlDeadlock\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryLeak", "MemoryLeak\MemoryLeak.csproj", "{5F486BB8-B29B-46C0-BD32-83D7C8BA63CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CpuUtilization", "CpuUtilization\CpuUtilization.csproj", "{01C8B711-24C6-46F9-8F8C-4C8B2D178C4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5F486BB8-B29B-46C0-BD32-83D7C8BA63CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F486BB8-B29B-46C0-BD32-83D7C8BA63CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F486BB8-B29B-46C0-BD32-83D7C8BA63CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01C8B711-24C6-46F9-8F8C-4C8B2D178C4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01C8B711-24C6-46F9-8F8C-4C8B2D178C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01C8B711-24C6-46F9-8F8C-4C8B2D178C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01C8B711-24C6-46F9-8F8C-4C8B2D178C4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
