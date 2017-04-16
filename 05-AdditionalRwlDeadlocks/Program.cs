@@ -1,24 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace RwlDeadlock
+namespace AdditionalRwlDeadlocks
 {
 	class Program
 	{
 		private const string Info = @"Deadlock example on ReaderWriterLock and ReaderWriterLockSlim.
 1. Deadlock on ReaderWriterLock
 2. Deadlock on ReaderWriterLockSlim
-3. Deadlock on upgrade ReaderWriterLock{0}
 Press Ctrl+C for exit.{0}";
 
 		private static readonly string[] ExampleNames =
 		{
 			"Deadlock on ReaderWriterLock",
-			"Deadlock on ReaderWriterLockSlim",
-			"Deadlock on upgrade ReaderWriterLock"
+			"Deadlock on ReaderWriterLockSlim"
 		};
+
 
 		static void Main(string[] args)
 		{
@@ -41,9 +42,6 @@ Press Ctrl+C for exit.{0}";
 				case 2:
 					new RwlSlimDeadlock().Show();
 					break;
-				case 3:
-					new UpgradableRwlDeadlock().Show();
-					break;
 				default:
 					return;
 			}
@@ -53,13 +51,13 @@ Press Ctrl+C for exit.{0}";
 		{
 			while (true)
 			{
-				Console.Write("Choose example (1-3) or q to exit: ");
+				Console.Write("Choose example (1-2) or q to exit: ");
 				var input = Console.ReadLine();
 				if (string.IsNullOrEmpty(input))
 					continue;
 
 				int exampleNumber;
-				if (int.TryParse(input, out exampleNumber) && (exampleNumber >= 1 && exampleNumber <= 3))
+				if (int.TryParse(input, out exampleNumber) && (exampleNumber >= 1 && exampleNumber <= 2))
 					return exampleNumber;
 
 				if (input.ToLowerInvariant() == "q")
