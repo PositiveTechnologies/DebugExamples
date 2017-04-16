@@ -1,15 +1,15 @@
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 
-namespace RwlDeadlock
+namespace AdditionalRwlDeadlocks
 {
-	internal class RwlDeadlock
+	internal class RwlSlimDeadlock
 	{
-		private readonly ReaderWriterLock _rwl = new ReaderWriterLock();
+		private readonly ReaderWriterLockSlim _rwl = new ReaderWriterLockSlim();
 
 		public void Show()
 		{
-			_rwl.AcquireWriterLock(Timeout.Infinite);
+			_rwl.EnterWriteLock();
 
 			try
 			{
@@ -18,20 +18,20 @@ namespace RwlDeadlock
 			}
 			finally
 			{
-				_rwl.ReleaseWriterLock();
+				_rwl.ExitWriteLock();
 			}
 		}
 
 		private void DoSomeReads()
 		{
-			_rwl.AcquireReaderLock(Timeout.Infinite);
+			_rwl.EnterReadLock();
 			try
 			{
 				// do some reads
 			}
 			finally
 			{
-				_rwl.ReleaseReaderLock();
+				_rwl.ExitReadLock();
 			}
 		}
 	}

@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8789BA1E-EF7A-4300-8E76-83A20500CC19}</ProjectGuid>
+    <ProjectGuid>{9492D6ED-AF36-4131-BB6B-541C90A57F35}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RwlDeadlock</RootNamespace>
-    <AssemblyName>RwlDeadlock</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <RootNamespace>_05_AdditionalRwlDeadlocks</RootNamespace>
+    <AssemblyName>05-AdditionalRwlDeadlocks</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -49,7 +49,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RwlDeadlock.cs" />
     <Compile Include="RwlSlimDeadlock.cs" />
-    <Compile Include="UpgradableRwlDeadlock.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
